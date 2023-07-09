@@ -6,6 +6,7 @@ use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LikeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,8 +34,11 @@ Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('logout', [LogoutController::class, 'store'])->name('logout');
 
+//Profile
+Route::get('/edit-profile', [PerfilController::class, 'index'])->name('profile.index');
+Route::post('/edit-profile', [PerfilController::class, 'store'])->name('profile.store');
+
 //Posts
-Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::post('posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/{user:username}/posts/{post}', [PostController::class, 'show'])->name('posts.show');
@@ -49,3 +53,6 @@ Route::post('/images', [ImageController::class, 'store'])->name('images.store');
 //Like post
 Route::post('/posts/{post}/likes', [LikeController::class, 'store'])->name('posts.likes.store');
 Route::delete('/posts/{post}/likes', [LikeController::class, 'destroy'])->name('posts.likes.destroy');
+
+
+Route::get('/{user:username}', [PostController::class, 'index'])->name('posts.index');
