@@ -12,9 +12,8 @@
   <body class="bg-gray-50">
     <header class="p-5 border-b bg-gray-50 shadow">
       <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-3xl text-black">Devstagram</h1>
+        <a href="{{ route('home') }}" class="text-3xl text-black">Devstagram</a>
         <nav class="flex gap-2 items-center">
-
           @auth
           <a class="flex items-center gap-2 bg-white border p-2 text-gray-700 rounded text-sm uppercase font-bold" href="{{ route('posts.create') }}">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
