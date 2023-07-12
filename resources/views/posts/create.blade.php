@@ -2,7 +2,7 @@
 @section('title', 'Create post')
 
 @push('styles')
-<link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
+  <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
 @endpush
 
 @section('content')

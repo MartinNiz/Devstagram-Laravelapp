@@ -7,7 +7,7 @@
     <title>Devstagram - @yield('title')</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
-
+    @livewireStyles
   </head>
   <body class="bg-gray-50">
     <header class="p-5 border-b bg-gray-50 shadow">
@@ -32,7 +32,6 @@
           <a class="font-bold uppercase text-black text-sm" href="{{ route('login') }}">Login</a>
           <a class="font-bold uppercase text-black text-sm text-" href="{{ route('signup') }}">Create acount</a>
           @endguest
-
         </nav>
       </div>
     </header>
@@ -45,5 +44,7 @@
     <footer class="text-center p-5 text-black font-bold uppercase mt-10">
       Devstagram - ALL RIGHTS RESERVED
     </footer>
+
+    @livewireScripts
   </body>
 </html>
